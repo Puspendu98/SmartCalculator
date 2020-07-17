@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">MyApp</string>
+    <string name="paragraph">
+
+        Our next example of dynamic programming is an algorithm that solves the problem
+of matrix-chain multiplication. We are given a sequence (chain) hA1, A2, . . . , An i
+of n matrices to be multiplied, and we wish to compute the product
+A1 A2 · · · An . (15.10)\n\n
+We can evaluate the expression (15.10) using the standard algorithm for multiplying
+pairs of matrices as a subroutine once we have parenthesized it to resolve all
+ambiguities in how the matrices are multiplied together. A product of matrices
+is fully parenthesized if it is either a single matrix or the product of two fully
+parenthesized matrix products, surrounded by parentheses. Matrix multiplication
+is associative, and so all parenthesizations yield the same product. For example,
+if the chain of matrices is hA1, A2, A3, A4i, the product A1 A2 A3 A4 can be fully
+parenthesized in five distinct ways:\n\n
+        The way we parenthesize a chain of matrices can have a dramatic impact on the
+cost of evaluating the product. Consider first the cost of multiplying two matrices.
+The standard algorithm is given by the following pseudocode. The attributes rows
+and columns are the numbers of rows and columns in a matrix.
+
+    </string>
+</resources>
