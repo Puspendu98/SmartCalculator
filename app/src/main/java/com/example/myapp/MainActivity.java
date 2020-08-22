@@ -3,6 +3,7 @@ package com.example.myapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     private Button one, two, three, four, five, six, seven, eight, nine, zero, plus, minus, multi, devision;
-    private Button clear, back, equal, point;
+    private Button clear, back, equal, point, next;
     private TextView textview;
     private final char ADDITION='+', SUBTRACTION='-', MULTIPLICATION='x', DEVISION='/', EQUAL= '=';
     private double val1 = Double.NaN;
@@ -25,8 +26,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        next = (Button) findViewById(R.id.buttonidnext);
 
-
+        next.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, MainActivityAgeC.class);
+                startActivity(i);
+            }
+        });
 
 
         setupUIView();

@@ -29,9 +29,9 @@ public class MainActivityAgeC extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_age_c);
 
-        todaytxt = findViewById(R.id.tvtoday);
+       todaytxt = findViewById(R.id.tvtoday);
         dobtxt = findViewById(R.id.tvdob);
-        agetxt = findViewById(R.id.btnresult);
+        agetxt = findViewById(R.id.tvage);
 
         dobbtn = findViewById(R.id.btndob);
         calculatebtn = findViewById(R.id.btnresult);
@@ -42,7 +42,7 @@ public class MainActivityAgeC extends AppCompatActivity {
         final int month = calendar.get(Calendar.MONTH);
         final int day = calendar.get(Calendar.DAY_OF_MONTH);
 
-        final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
         mtoday = simpleDateFormat.format(Calendar.getInstance().getTime());
         todaytxt.setText("Today: "+mtoday);
 
@@ -56,8 +56,9 @@ public class MainActivityAgeC extends AppCompatActivity {
         });
         dateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
-            public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {
-                mbirthday = i +"/" + month + "/" + year;
+            public void onDateSet(DatePicker datePicker, int year, int month, int dayOfMonth) {
+                month = month + 1;
+                mbirthday = dayOfMonth +"/" + month + "/" + year;
                 dobtxt.setText("Birthday: "+mbirthday);
             }
         };
@@ -65,7 +66,7 @@ public class MainActivityAgeC extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (mbirthday == null) {
-                    Toast.makeText(getApplicationContext()."please enter your date of birth", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"please enter your date of birth", Toast.LENGTH_SHORT).show();
                 } else {
                     SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("dd/MM/yyyy");
                     try {
