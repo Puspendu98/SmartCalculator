@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1D3471"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivityAgeC">
+
+    <TextView
+    android:id="@+id/tvtoday"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Today: "
+    android:textSize="25sp"
+    android:textStyle="bold"
+    android:textColor="#FFFFFF"
+    />
+    <TextView
+        android:id="@+id/tvdob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date of birth: "
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        />
+    <Button
+        android:id="@+id/btndob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter date of birth"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+    <Button
+        android:id="@+id/btnresult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/tvage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your age: "
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        />
+
+</LinearLayout>
